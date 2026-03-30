@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26.1 (Java Edition) — Minecraft Wiki</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #111;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #ddd;
+            padding: 20px;
+        }
+
+        .wiki-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            overflow: hidden;
+        }
+
+        /* Шапка */
+        .wiki-header {
+            background: linear-gradient(135deg, #2c2c2c 0%, #1f1f1f 100%);
+            padding: 30px 40px;
+            border-bottom: 4px solid #4caf50;
+        }
+
+        .wiki-header h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .wiki-header .version {
+            color: #8bc34a;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .wiki-header .date {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+
+        /* Оглавление */
+        .toc {
+            background-color: #252525;
+            margin: 20px 30px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #4caf50;
+        }
+
+        .toc h2 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .toc ul {
+            columns: 2;
+            column-gap: 30px;
+            list-style: none;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+        }
+
+        .toc a {
+            color: #8bc34a;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: #c8e6a5;
+            text-decoration: underline;
+        }
+
+        /* Основной контент */
+        .wiki-content {
+            padding: 20px 30px 40px;
+        }
+
+        /* Секции */
+        .section {
+            margin-bottom: 40px;
+            scroll-margin-top: 20px;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid #4caf50;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .section h3 {
+            font-size: 1.4rem;
+            margin: 20px 0 12px 0;
+            color: #ccc;
+        }
+
+        .section h4 {
+            font-size: 1.2rem;
+            margin: 15px 0 10px 0;
+            color: #bbb;
+            font-weight: 600;
+        }
+
+        /* Карточка предмета/блока */
+        .item-card {
+            background-color: #2a2a2a;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #3a3a3a;
+        }
+
+        .item-title {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #ffd966;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .crafting-grid {
+            background-color: #1e1e1e;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            display: inline-block;
+            border: 1px solid #3a3a3a;
+        }
+
+        .grid-row {
+            display: flex;
+        }
+
+        .grid-cell {
+            width: 50px;
+            height: 50px;
+            background-color: #2d2d2d;
+            margin: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            text-align: center;
+            color: #ffd966;
+            border: 1px solid #4a4a4a;
+        }
+
+        .arrow {
+            font-size: 2rem;
+            margin: 0 20px;
+            color: #8bc34a;
+        }
+
+        .code-block {
+            background-color: #1e1e1e;
+            border-left: 3px solid #4caf50;
+            padding: 12px 15px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            margin: 15px 0;
+            border-radius: 6px;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 10px 0;
+        }
+
+        .tag {
+            background-color: #2c2c2c;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-family: monospace;
+            font-size: 0.8rem;
+            color: #8bc34a;
+            border: 1px solid #4caf50;
+        }
+
+        .note {
+            background-color: #2a2a2a;
+            border-left: 3px solid #ffa500;
+            padding: 10px 15px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+
+        hr {
+            border-color: #3a3a3a;
+            margin: 25px 0;
+        }
+
+        /* Списки */
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .wiki-header {
+                padding: 20px;
+            }
+            .wiki-content {
+                padding: 15px;
+            }
+            .toc ul {
+                columns: 1;
+            }
+            .grid-cell {
+                width: 40px;
+                height: 40px;
+                font-size: 0.7rem;
+            }
+        }
+
+        a {
+            color: #8bc34a;
+        }
+
+        .badge {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div class="wiki-container">
+    <div class="wiki-header">
+        <h1>26.1 (Java Edition)</h1>
+        <div class="version">Нововведения, изменения и технические детали</div>
+        <div class="date">Выход: март 2026</div>
+    </div>
+
+        <div style="text-align: center; color: #888; padding: 20px 0;">
+            Minecraft Java Edition 26.1 — обновление, улучшающее как геймплей, так и техническую основу игры.<br>
+            ✨ Новые возможности для картмейкеров, датапаков и всех, кто любит кастомизацию.<br>
+            TG: <a href="https://t.me/edaserv_skuf_club">Telegram</a><br>
+            IP Сервера: <code>edaserv.skuf.club</code>
+        </div>
+
+
+    <div class="toc">
+        <h2>📑 Содержание</h2>
+        <ul>
+            <li><a href="#golden-dandelion">🌻 Золотой одуванчик</a></li>
+            <li><a href="#swing-command">🖐️ Команда /swing</a></li>
+            <li><a href="#environment-attributes">💡 Атрибуты окружения</a></li>
+            <li><a href="#world-clocks">⏰ Мировые часы и временные метки</a></li>
+            <li><a href="#data-trades">📊 Сделки, управляемые данными</a></li>
+            <li><a href="#tags">🏷️ Новые теги блоков, предметов и сущностей</a></li>
+            <li><a href="#baby-mobs">🐣 Детёныши: модели, звуки, текстуры</a></li>
+            <li><a href="#technical">⚙️ Технические изменения (мир, рецепты, рендеринг)</a></li>
+            <li><a href="#fixes">🐛 Исправленные ошибки</a></li>
+        </ul>
+    </div>
+
+    <div class="wiki-content">
+        <!-- Золотой одуванчик -->
+        <div class="section" id="golden-dandelion">
+            <h2>🌻 Золотой одуванчик</h2>
+            <div class="item-card">
+                <div class="item-title">✨ Золотой одуванчик</div>
+                <p><strong>Создаётся из одуванчика и 8 кусочков золота:</strong></p>
+                <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 15px;">
+                    <div class="crafting-grid">
+                        <div class="grid-row"><div class="grid-cell">Зол. кус.</div><div class="grid-cell">Зол. кус.</div><div class="grid-cell">Зол. кус.</div></div>
+                        <div class="grid-row"><div class="grid-cell">Зол. кус.</div><div class="grid-cell">Одуванчик</div><div class="grid-cell">Зол. кус.</div></div>
+                        <div class="grid-row"><div class="grid-cell">Зол. кус.</div><div class="grid-cell">Зол. кус.</div><div class="grid-cell">Зол. кус.</div></div>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="crafting-grid"><div class="grid-row"><div class="grid-cell">✨ Золотой одуванчик</div></div></div>
+                </div>
+                <p>🔹 Также может быть куплен у странствующего торговца.<br>
+                🔹 При использовании на детёныше останавливает его рост (<code>AgeLocked: 1</code>). Повторное использование возобновляет (<code>AgeLocked: 0</code>).<br>
+                🔹 Испускает зелёные частицы: <span style="color:#a5d6a5;">опускающиеся</span> (остановка) или <span style="color:#a5d6a5;">поднимающиеся</span> (возобновление).<br>
+                🔹 Не работает на монстрах (кроме хоглинов) и жителях.<br>
+                🔹 Можно посадить в горшок, использовать как жёлтый краситель или в загадочном рагу (эффект «Насыщенность»).</p>
+                <div class="note">📌 Добавлены частицы <code>pause_mob_growth</code> и <code>reset_mob_growth</code>.</div>
+            </div>
+        </div>
+
+        <!-- /swing -->
+        <div class="section" id="swing-command">
+            <h2>🖐️ Команда /swing</h2>
+            <p>Новая команда, позволяющая размахивать руками сущностей.<br>
+            <strong>Синтаксис:</strong> <code>/swing &lt;селектор сущности&gt; &lt;основная рука|вторая рука&gt;</code><br>
+            🔹 Работает даже с манекенами.<br>
+            🔹 Выводит количество сущностей, которые начали анимацию.</p>
+        </div>
+
+        <!-- Атрибуты окружения -->
+        <div class="section" id="environment-attributes">
+            <h2>💡 Атрибуты окружения</h2>
+            <h3><code>minecraft:visual/block_light_tint</code></h3>
+            <p>Цвет освещения от блоков. По умолчанию — <span style="background:#ffd88c; padding:2px 8px; border-radius:4px;">#FFD88C</span> (жёлтоватый оттенок факелов).</p>
+            <h3><code>minecraft:visual/ambient_light_color</code></h3>
+            <p>Окружающий свет в полной темноте. Значения: Верхний мир <span style="background:#0a0a0a; color:white; padding:2px 6px;">#0A0A0A</span>, Незер <span style="background:#302821; padding:2px 6px;">#302821</span>, Энд <span style="background:#3f473f; padding:2px 6px;">#3f473f</span>.</p>
+            <h3><code>minecraft:visual/night_vision_color</code></h3>
+            <p>Цвет эффекта «Ночное зрение». По умолчанию <span style="background:#999; padding:2px 6px;">#999999</span>.</p>
+        </div>
+
+        <!-- Мировые часы -->
+        <div class="section" id="world-clocks">
+            <h2>⏰ Мировые часы и временные метки</h2>
+            <p>Команда <code>/time</code> полностью переработана. Теперь можно создавать собственные <strong>мировые часы</strong> (world clocks) в <code>data/&lt;namespace&gt;/world_clock/</code>.</p>
+            <div class="code-block">
+                /time [of &lt;clock&gt;] set &lt;time&gt;<br>
+                /time [of &lt;clock&gt;] pause | resume<br>
+                /time [of &lt;clock&gt;] rate &lt;rate&gt;  (множитель скорости)<br>
+                /time [of &lt;clock&gt;] query time
+            </div>
+            <p><strong>Временные метки (time markers):</strong> <code>minecraft:wake_up_from_sleep</code>, <code>minecraft:roll_village_siege</code> и другие.</p>
+        </div>
+
+        <!-- Сделки -->
+        <div class="section" id="data-trades">
+            <h2>📊 Сделки, управляемые данными</h2>
+            <p>Сделки жителей и странствующих торговцев теперь полностью настраиваются через JSON в папках <code>trade_set</code> и <code>villager_trade</code>.</p>
+            <div class="code-block">
+{
+  "wants": { "id": "minecraft:emerald" },
+  "additional_wants": { "id": "minecraft:book" },
+  "gives": { "id": "minecraft:enchanted_book", "count": 1 },
+  "max_uses": 12,
+  "xp": 1,
+  "merchant_predicate": { ... }
+}
+            </div>
+            <p>🔹 Можно указывать <code>given_item_modifiers</code>, предикаты, теги чар, влияющие на цену (<code>#double_trade_price</code>).</p>
+        </div>
+
+        <!-- Теги -->
+        <div class="section" id="tags">
+            <h2>🏷️ Новые теги блоков, предметов и сущностей</h2>
+            <h3>Теги для растительности:</h3>
+            <div class="tag-list">
+                <span class="tag">#supports_vegetation</span>
+                <span class="tag">#supports_crops</span>
+                <span class="tag">#supports_sugar_cane</span>
+                <span class="tag">#supports_cactus</span>
+                <span class="tag">#grows_crops</span>
+                <span class="tag">#enables_bubble_column_drag_down</span>
+                <span class="tag">#enables_bubble_column_push_up</span>
+            </div>
+            <h3>Теги для предметов:</h3>
+            <div class="tag-list">
+                <span class="tag">#metal_nuggets</span>
+                <span class="tag">#dyes</span>
+                <span class="tag">#loom_dyes</span>
+                <span class="tag">#cat_collar_dyes</span>
+                <span class="tag">#wolf_collar_dyes</span>
+            </div>
+            <h3>Тег для сущностей:</h3>
+            <div class="tag-list"><span class="tag">#cannot_be_age_locked</span> — мобы, на которых не действует золотой одуванчик.</div>
+            <h3>Теги сделок:</h3>
+            <p><code>#&lt;профессия&gt;/level_&lt;уровень&gt;</code>, <code>#wandering_trader/buying</code>, <code>#wandering_trader/common</code> и другие.</p>
+        </div>
+
+        <!-- Детёныши -->
+        <div class="section" id="baby-mobs">
+            <h2>🐣 Детёныши: новые модели, текстуры и звуки</h2>
+            <p>Полностью обновлены модели и текстуры детёнышей всех мобов (кроме гастят и наутилусов).<br>
+            🔹 Добавлены <strong>звуковые вариации</strong> для котят, волчат, поросят, жеребят, цыплят.<br>
+            🔹 Седло и броня больше не отображаются на детёнышах свиней, верблюдов, волков.<br>
+            🔹 Дети жителей и зомби-жителей получили слоистую модель поверх базовой.<br>
+            🔹 Новые звуковые события: <code>entity.baby_cat.ambient</code>, <code>entity.baby_wolf.growl</code>, <code>entity.baby_horse.eat</code> и многие другие.<br>
+            🔹 Добавлены звуковые вариации для взрослых: <code>cat_royal</code>, <code>pig_mini/big</code>, <code>cow_moody</code>, <code>chicken_picky</code>.</p>
+            <div class="note">📁 Все текстуры детёнышей находятся в папках <code>entity/.../baby/</code> и переименованы согласно новой структуре.</div>
+        </div>
+
+        <!-- Технические изменения -->
+        <div class="section" id="technical">
+            <h2>⚙️ Технические изменения и улучшения</h2>
+            <h3>📁 Структура мира (level.dat)</h3>
+            <ul>
+                <li>Тег <code>player</code> заменён на <code>singleplayer_uuid</code>.</li>
+                <li>Настройки сложности — строковые: <code>peaceful, easy, normal, hard</code>.</li>
+                <li>Данные битвы с драконом, погоды, правил, карт перемещены в <code>data/minecraft/</code>.</li>
+                <li>Папки измерений: <code>dimensions/minecraft/overworld</code>, <code>the_nether</code>, <code>the_end</code>.</li>
+                <li>Данные игроков: <code>players/advancements</code>, <code>players/data</code>, <code>players/stats</code>.</li>
+            </ul>
+            <h3>🔄 Рецепты</h3>
+            <p>Добавлены новые типы рецептов: <code>minecraft:crafting_dye</code>, <code>minecraft:crafting_imbue</code>, <code>minecraft:crafting_transmute</code> с расширенными настройками. Удалены устаревшие специальные рецепты (карт, клонирования книг и т.д.).</p>
+            <h3>🎨 Модели предметов</h3>
+            <p>Поле <code>transformation</code> добавлено во все типы моделей. Новые специальные модели: <code>minecraft:bell</code>, <code>minecraft:book</code>, <code>minecraft:end_cube</code>. Модели кроватей, флагов, сундуков теперь используют <code>part</code>, <code>attachment</code>, <code>chest_type</code>.</p>
+            <h3>🧩 Компоненты данных</h3>
+            <p>🔸 <code>minecraft:dye</code> — цвет красителя (white, orange, magenta, …).<br>
+            🔸 <code>minecraft:additional_trade_cost</code> — временная модификация цены в сделках.<br>
+            🔸 <code>minecraft:provides_banner_patterns</code> теперь принимает список ID.</p>
+            <h3>📈 Поставщики чисел и предикаты</h3>
+            <p>Добавлены <code>minecraft:environment_attribute</code>, <code>minecraft:sum</code>, предикат <code>minecraft:environment_attribute_check</code>, поставщик целых чисел <code>trapezoid</code>.</p>
+            <h3>🖥️ Системные изменения</h3>
+            <ul>
+                <li>Требуется Java 25 (Microsoft OpenJDK 25).</li>
+                <li>По умолчанию выделяется 4 ГБ RAM, сборщик мусора ZGC (для совместимых устройств).</li>
+                <li>Новый отладочный рендерер карты освещения (F3+4).</li>
+                <li>Опция «Эксклюзивный полноэкранный режим» (требует перезапуска).</li>
+                <li>Улучшена поддержка IME (редакторов ввода) под Windows/macOS.</li>
+            </ul>
+            <h3>🔊 Звуки трубы для музыкального блока</h3>
+            <p>На медных блоках музыкальный блок играет звуки трубы, меняющиеся в зависимости от стадии окисления: <code>block.note_block.trumpet</code>, <code>..._exposed</code>, <code>..._weathered</code>, <code>..._oxidized</code>.</p>
+        </div>
+
+        <!-- Исправления -->
+        <div class="section" id="fixes">
+            <h2>🐛 Исправленные ошибки (выборочно)</h2>
+            <ul>
+                <li>MC-13187 – Вода в котлах с водой стала прозрачной.</li>
+                <li>MC-102774 – Для возрождения дракона Энда теперь нужно больше кристаллов (исправлено).</li>
+                <li>MC-179949 – Команда <code>/item replace</code> теперь работает с инвентарём пиглинов.</li>
+                <li>MC-222949 – Копья с «Подводной хваткой» больше не работают верхом на сущностях.</li>
+                <li>MC-303119 – Кормление кошек и волков в режиме выживания восстанавливает правильное количество здоровья.</li>
+                <li>MC-304446 – Активация стазис-камеры губкой больше не удаляет жемчуг Эндера.</li>
+                <li>MC-305888 – Яйца черепах теперь вылупляются в Незере и Энде.</li>
+                <li>MC-306123 – Волки больше не атакуют игроков на мирной сложности.</li>
+                <li>И ещё более 80 исправлений, включая рендеринг, звуки, поведение мобов и стабильность.</li>
+            </ul>
+            <div class="note">📌 Полный список исправлений доступен в официальном журнале изменений.</div>
+        </div>
+
+        <hr>
+
+        <div style="text-align: center; color: #888; padding: 20px 0;">
+            Minecraft Java Edition 26.1 — обновление, улучшающее как геймплей, так и техническую основу игры.<br>
+            ✨ Новые возможности для картмейкеров, датапаков и всех, кто любит кастомизацию.<br>
+            TG: <a href="https://t.me/edaserv_skuf_club">Telegram</a><br>
+            IP Сервера: <code>edaserv.skuf.club</code>
+        </div>
+    </div>
+</div>
+</body>
+</html>
