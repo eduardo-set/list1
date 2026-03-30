@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-        <meta property="og:title" content="Minecraft 26.1 — Обновление" />
-        <meta property="og:description" content="Золотой одуванчик, команда /swing, новые модели детёнышей и многое другое" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://eduardo-set.github.io/preview.png" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>26.1 (Java Edition) — Minecraft</title>
@@ -16,27 +12,26 @@
         }
 
         body {
-            background-color: #111;
+            background-color: #0a0a0a;
             font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #ddd;
+            color: #e0e0e0;
             padding: 20px;
         }
 
         .wiki-container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             background-color: #1a1a1a;
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
             overflow: hidden;
         }
 
-        /* Шапка */
         .wiki-header {
-            background: linear-gradient(135deg, #2c2c2c 0%, #1f1f1f 100%);
+            background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
             padding: 30px 40px;
-            border-bottom: 4px solid #4caf50;
+            border-bottom: 4px solid #5a9e4e;
         }
 
         .wiki-header h1 {
@@ -52,18 +47,17 @@
         }
 
         .wiki-header .date {
-            color: #aaa;
+            color: #888;
             font-size: 0.9rem;
             margin-top: 8px;
         }
 
-        /* Оглавление */
         .toc {
             background-color: #252525;
             margin: 20px 30px;
-            padding: 15px 20px;
+            padding: 15px 25px;
             border-radius: 8px;
-            border-left: 4px solid #4caf50;
+            border-left: 4px solid #5a9e4e;
         }
 
         .toc h2 {
@@ -73,7 +67,7 @@
         }
 
         .toc ul {
-            columns: 2;
+            columns: 3;
             column-gap: 30px;
             list-style: none;
         }
@@ -85,28 +79,24 @@
         .toc a {
             color: #8bc34a;
             text-decoration: none;
-            transition: color 0.2s;
         }
 
         .toc a:hover {
-            color: #c8e6a5;
             text-decoration: underline;
         }
 
-        /* Основной контент */
         .wiki-content {
             padding: 20px 30px 40px;
         }
 
-        /* Секции */
         .section {
-            margin-bottom: 40px;
+            margin-bottom: 45px;
             scroll-margin-top: 20px;
         }
 
         .section h2 {
             font-size: 1.8rem;
-            border-bottom: 2px solid #4caf50;
+            border-bottom: 2px solid #5a9e4e;
             padding-bottom: 8px;
             margin-bottom: 20px;
             color: #fff;
@@ -114,20 +104,18 @@
 
         .section h3 {
             font-size: 1.4rem;
-            margin: 20px 0 12px 0;
+            margin: 25px 0 12px 0;
             color: #ccc;
         }
 
         .section h4 {
             font-size: 1.2rem;
-            margin: 15px 0 10px 0;
+            margin: 20px 0 10px 0;
             color: #bbb;
-            font-weight: 600;
         }
 
-        /* Карточка предмета/блока */
         .item-card {
-            background-color: #2a2a2a;
+            background-color: #252525;
             border-radius: 12px;
             padding: 20px;
             margin: 20px 0;
@@ -135,13 +123,10 @@
         }
 
         .item-title {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: bold;
             color: #ffd966;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
+            margin-bottom: 15px;
         }
 
         .crafting-grid {
@@ -158,15 +143,15 @@
         }
 
         .grid-cell {
-            width: 50px;
-            height: 50px;
+            width: 55px;
+            height: 55px;
             background-color: #2d2d2d;
             margin: 2px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 6px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             text-align: center;
             color: #ffd966;
             border: 1px solid #4a4a4a;
@@ -180,13 +165,15 @@
 
         .code-block {
             background-color: #1e1e1e;
-            border-left: 3px solid #4caf50;
+            border-left: 3px solid #5a9e4e;
             padding: 12px 15px;
             font-family: 'Consolas', 'Monaco', monospace;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             overflow-x: auto;
             margin: 15px 0;
             border-radius: 6px;
+            white-space: pre-wrap;
+            word-break: break-all;
         }
 
         .tag-list {
@@ -197,13 +184,13 @@
         }
 
         .tag {
-            background-color: #2c2c2c;
-            padding: 4px 10px;
+            background-color: #2c3e2c;
+            padding: 4px 12px;
             border-radius: 20px;
             font-family: monospace;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #8bc34a;
-            border: 1px solid #4caf50;
+            border: 1px solid #5a9e4e;
         }
 
         .note {
@@ -219,7 +206,6 @@
             margin: 25px 0;
         }
 
-        /* Списки */
         ul, ol {
             margin-left: 25px;
             margin-bottom: 15px;
@@ -229,7 +215,28 @@
             margin-bottom: 5px;
         }
 
-        /* Адаптивность */
+        .plant-list {
+            columns: 4;
+            column-gap: 20px;
+            margin: 10px 0;
+        }
+
+        .plant-list li {
+            margin-left: 20px;
+        }
+
+        .fixes-list {
+            columns: 2;
+            column-gap: 30px;
+            margin: 15px 0;
+        }
+
+        .fixes-list li {
+            margin-left: 20px;
+            font-family: monospace;
+            font-size: 0.85rem;
+        }
+
         @media (max-width: 768px) {
             .wiki-header {
                 padding: 20px;
@@ -237,29 +244,49 @@
             .wiki-content {
                 padding: 15px;
             }
-            .toc ul {
+            .toc ul, .fixes-list {
                 columns: 1;
             }
             .grid-cell {
                 width: 40px;
                 height: 40px;
-                font-size: 0.7rem;
+                font-size: 0.65rem;
+            }
+            .plant-list {
+                columns: 1;
             }
         }
 
-        a {
-            color: #8bc34a;
+        code {
+            background-color: #2d2d2d;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.85em;
+            color: #ffd966;
         }
 
-        .badge {
-            background-color: #4caf50;
-            color: #fff;
+        pre {
+            background-color: #1e1e1e;
+            padding: 12px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .badge-new {
+            background-color: #5a9e4e;
+            color: white;
+            font-size: 0.7rem;
             padding: 2px 8px;
             border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
-            margin-left: 10px;
+            margin-left: 8px;
             vertical-align: middle;
+        }
+
+        .texture-list {
+            columns: 4;
+            font-size: 0.8rem;
+            font-family: monospace;
         }
     </style>
 </head>
@@ -268,7 +295,7 @@
     <div class="wiki-header">
         <h1>26.1 (Java Edition)</h1>
         <div class="version">Нововведения, изменения и технические детали</div>
-        <div class="date">Выход: март 2026</div>
+        <div class="date">Выход: Март 2026</div>
     </div>
 
         <div style="text-align: center; color: #888; padding: 20px 0;">
@@ -278,26 +305,44 @@
             IP Сервера: <code>edaserv.skuf.club</code>
         </div>
 
-
     <div class="toc">
         <h2>📑 Содержание</h2>
         <ul>
             <li><a href="#golden-dandelion">🌻 Золотой одуванчик</a></li>
-            <li><a href="#swing-command">🖐️ Команда /swing</a></li>
-            <li><a href="#environment-attributes">💡 Атрибуты окружения</a></li>
-            <li><a href="#world-clocks">⏰ Мировые часы и временные метки</a></li>
-            <li><a href="#data-trades">📊 Сделки, управляемые данными</a></li>
-            <li><a href="#tags">🏷️ Новые теги блоков, предметов и сущностей</a></li>
-            <li><a href="#baby-mobs">🐣 Детёныши: модели, звуки, текстуры</a></li>
-            <li><a href="#technical">⚙️ Технические изменения (мир, рецепты, рендеринг)</a></li>
-            <li><a href="#fixes">🐛 Исправленные ошибки</a></li>
+            <li><a href="#swing">🖐️ Команда /swing</a></li>
+            <li><a href="#env-attributes">💡 Атрибуты окружения</a></li>
+            <li><a href="#time-markers">⏰ Временные метки и мировые часы</a></li>
+            <li><a href="#trade-sets">📊 Наборы сделок</a></li>
+            <li><a href="#debug-renderer">🔍 Отладочный рендерер карты освещения</a></li>
+            <li><a href="#number-providers">🔢 Поставщики чисел и предикаты</a></li>
+            <li><a href="#data-trades">💼 Сделки, управляемые данными</a></li>
+            <li><a href="#block-tags">🏷️ Теги для блоков</a></li>
+            <li><a href="#fluid-tags">💧 Теги для жидкостей</a></li>
+            <li><a href="#potion-tags">🧪 Теги для зелий</a></li>
+            <li><a href="#item-tags">📦 Теги для предметов</a></li>
+            <li><a href="#entity-tags">👾 Теги для сущностей</a></li>
+            <li><a href="#components">🧩 Компоненты данных</a></li>
+            <li><a href="#loot-functions">🎲 Функции добычи</a></li>
+            <li><a href="#particles">✨ Частицы</a></li>
+            <li><a href="#changes-blocks">🧱 Изменения блоков</a></li>
+            <li><a href="#changes-items">🔧 Изменения предметов</a></li>
+            <li><a href="#changes-mobs">🐾 Изменения мобов</a></li>
+            <li><a href="#commands">⌨️ Формат команд</a></li>
+            <li><a href="#world-changes">🌍 Изменения мира и level.dat</a></li>
+            <li><a href="#lighting">💡 Алгоритм карт освещения</a></li>
+            <li><a href="#worldgen">🏔️ Генерация мира</a></li>
+            <li><a href="#sounds">🔊 Звуки</a></li>
+            <li><a href="#gui">🖥️ Интерфейс и настройки</a></li>
+            <li><a href="#models">🎨 Модели блоков и предметов</a></li>
+            <li><a href="#recipes">📜 Рецепты</a></li>
+            <li><a href="#fixes">🐛 Исправленные ошибки (89)</a></li>
         </ul>
     </div>
 
     <div class="wiki-content">
         <!-- Золотой одуванчик -->
         <div class="section" id="golden-dandelion">
-            <h2>🌻 Золотой одуванчик</h2>
+            <h2>🌻 Золотой одуванчик <span class="badge-new">Новое</span></h2>
             <div class="item-card">
                 <div class="item-title">✨ Золотой одуванчик</div>
                 <p><strong>Создаётся из одуванчика и 8 кусочков золота:</strong></p>
@@ -308,158 +353,705 @@
                         <div class="grid-row"><div class="grid-cell">Зол. кус.</div><div class="grid-cell">Зол. кус.</div><div class="grid-cell">Зол. кус.</div></div>
                     </div>
                     <div class="arrow">→</div>
-                    <div class="crafting-grid"><div class="grid-row"><div class="grid-cell">✨ Золотой одуванчик</div></div></div>
+                    <div class="crafting-grid"><div class="grid-row"><div class="grid-cell">✨ Золотой<br>одуванчик</div></div></div>
                 </div>
-                <p>🔹 Также может быть куплен у странствующего торговца.<br>
-                🔹 При использовании на детёныше останавливает его рост (<code>AgeLocked: 1</code>). Повторное использование возобновляет (<code>AgeLocked: 0</code>).<br>
-                🔹 Испускает зелёные частицы: <span style="color:#a5d6a5;">опускающиеся</span> (остановка) или <span style="color:#a5d6a5;">поднимающиеся</span> (возобновление).<br>
-                🔹 Не работает на монстрах (кроме хоглинов) и жителях.<br>
-                🔹 Можно посадить в горшок, использовать как жёлтый краситель или в загадочном рагу (эффект «Насыщенность»).</p>
+                <p>• Также может быть куплен у странствующего торговца.<br>
+                • При использовании на детёныше останавливает его рост, устанавливая NBT-атрибут <code>AgeLocked</code> на <code>1</code>.<br>
+                • При повторном использовании возобновляет рост, устанавливая <code>AgeLocked</code> на <code>0</code>.<br>
+                • Испускает разные частицы: <span style="color:#8bc34a;">зелёные, опускающиеся вниз</span> (остановка) или <span style="color:#8bc34a;">поднимающиеся вверх</span> (возобновление).<br>
+                • Не может быть использован на монстрах (включая ездовую нежить, но исключая хоглинов) и деревенских жителях.<br>
+                • Как и другие цветы, может быть размещён на земле или посажен в цветочный горшок.<br>
+                • Может использоваться для создания жёлтого красителя или загадочного рагу с эффектом «Насыщенность».</p>
                 <div class="note">📌 Добавлены частицы <code>pause_mob_growth</code> и <code>reset_mob_growth</code>.</div>
             </div>
         </div>
 
         <!-- /swing -->
-        <div class="section" id="swing-command">
-            <h2>🖐️ Команда /swing</h2>
+        <div class="section" id="swing">
+            <h2>🖐️ Команда /swing <span class="badge-new">Новое</span></h2>
             <p>Новая команда, позволяющая размахивать руками сущностей.<br>
-            <strong>Синтаксис:</strong> <code>/swing &lt;селектор сущности&gt; &lt;основная рука|вторая рука&gt;</code><br>
-            🔹 Работает даже с манекенами.<br>
-            🔹 Выводит количество сущностей, которые начали анимацию.</p>
+            Команда успешно работает в отношении всех сущностей, но не каждая из них поддерживает анимацию размахивания. Клиент будет отображать анимацию только тогда, когда это возможно.<br>
+            Например, команда позволяет размахивать руками манекена.<br>
+            Выводит количество сущностей, которые размахивают руками.</p>
+            <div class="code-block"><strong>Синтаксис:</strong> /swing &lt;селектор сущности&gt; &lt;основная рука|вторая рука&gt;</div>
         </div>
 
         <!-- Атрибуты окружения -->
-        <div class="section" id="environment-attributes">
-            <h2>💡 Атрибуты окружения</h2>
+        <div class="section" id="env-attributes">
+            <h2>💡 Атрибуты окружения <span class="badge-new">Новое</span></h2>
             <h3><code>minecraft:visual/block_light_tint</code></h3>
-            <p>Цвет освещения от блоков. По умолчанию — <span style="background:#ffd88c; padding:2px 8px; border-radius:4px;">#FFD88C</span> (жёлтоватый оттенок факелов).</p>
+            <p>Цвет освещения блока. Изначально имеет тёмно-серый цвет при низком уровне освещённости, становится окрашенным этим атрибутом при среднем уровне и белым при высоком уровне. По умолчанию он придаёт желтоватый оттенок факелам. Для этого атрибута лучше всего подходят яркие цвета, при этом хотя бы один цветовой компонент должен быть полностью ярким. Оттенок применяется глобально ко всем источникам света, видимым на экране. Отдельные источники света не могут быть окрашены по-разному.<br>
+            <strong>Тип значения:</strong> цвет RGB<br>
+            <strong>Значение по умолчанию:</strong> <span style="background:#ffd88c; padding:2px 8px; border-radius:4px;">#FFD88C</span><br>
+            <strong>Модификаторы:</strong> модификаторы цвета RGB<br>
+            <strong>Интерполяция:</strong> да<br>
+            <strong>Разрешено в точке расположения камеры</strong></p>
+            
             <h3><code>minecraft:visual/ambient_light_color</code></h3>
-            <p>Окружающий свет в полной темноте. Значения: Верхний мир <span style="background:#0a0a0a; color:white; padding:2px 6px;">#0A0A0A</span>, Незер <span style="background:#302821; padding:2px 6px;">#302821</span>, Энд <span style="background:#3f473f; padding:2px 6px;">#3f473f</span>.</p>
+            <p>Определяет оттенок и яркость окружающего освещения. Этот свет применяется к миру при нулевом уровне освещённости. Сверху добавляется свет от блоков и неба.<br>
+            <strong>Тип значения:</strong> цвет RGB<br>
+            <strong>Значения по умолчанию:</strong> <span style="background:#0a0a0a; color:white; padding:2px 6px;">#0A0A0A</span> (Верхний мир), <span style="background:#302821; padding:2px 6px;">#302821</span> (Незер), <span style="background:#3f473f; padding:2px 6px;">#3f473f</span> (Энд)<br>
+            <strong>Модификаторы:</strong> модификаторы цвета RGB<br>
+            <strong>Интерполяция:</strong> да<br>
+            <strong>Разрешено в точке расположения камеры</strong></p>
+            
             <h3><code>minecraft:visual/night_vision_color</code></h3>
-            <p>Цвет эффекта «Ночное зрение». По умолчанию <span style="background:#999; padding:2px 6px;">#999999</span>.</p>
+            <p>Этот цвет используется аналогично цвету окружающего освещения. Когда эффект «Ночное зрение» активен, в качестве окружающего цвета используется максимум значений minecraft:visual/night_vision_color и minecraft:visual/ambient_light_color для каждого компонента. «Ночное зрение» по умолчанию не окрашивает свет.<br>
+            <strong>Тип значения:</strong> цвет RGB<br>
+            <strong>Значение по умолчанию:</strong> <span style="background:#999; padding:2px 6px;">#999999</span><br>
+            <strong>Модификаторы:</strong> модификаторы цвета RGB<br>
+            <strong>Интерполяция:</strong> да<br>
+            <strong>Разрешено в точке расположения камеры</strong></p>
         </div>
 
-        <!-- Мировые часы -->
-        <div class="section" id="world-clocks">
-            <h2>⏰ Мировые часы и временные метки</h2>
-            <p>Команда <code>/time</code> полностью переработана. Теперь можно создавать собственные <strong>мировые часы</strong> (world clocks) в <code>data/&lt;namespace&gt;/world_clock/</code>.</p>
-            <div class="code-block">
-                /time [of &lt;clock&gt;] set &lt;time&gt;<br>
-                /time [of &lt;clock&gt;] pause | resume<br>
-                /time [of &lt;clock&gt;] rate &lt;rate&gt;  (множитель скорости)<br>
-                /time [of &lt;clock&gt;] query time
-            </div>
-            <p><strong>Временные метки (time markers):</strong> <code>minecraft:wake_up_from_sleep</code>, <code>minecraft:roll_village_siege</code> и другие.</p>
+        <!-- Временные метки -->
+        <div class="section" id="time-markers">
+            <h2>⏰ Временные метки и мировые часы <span class="badge-new">Новое</span></h2>
+            <p>Временные метки назначают определённое имя конкретному (опционально повторяющемуся) моменту времени для конкретных мировых часов. Временные метки заменяют ранее предопределённые имена, которые могли использоваться командой <code>/time set</code>, например day или night.</p>
+            <p>Временные метки существуют в контексте конкретных мировых часов. Это означает, что, хотя разные временные метки могут быть определены разными таймлайнами, для одних мировых часов может существовать только одна временная метка с определённым идентификатором. Также это означает, что у двух разных мировых часов могут быть временные метки с одинаковым именем.</p>
+            <h3>Встроенные применения временных меток</h3>
+            <p>Некоторые временные метки используются для управления поведением немодифицированной игры. Как правило, они настроены так, чтобы не отображаться в командах /time.</p>
+            <ul>
+                <li><code>minecraft:wake_up_from_sleep</code> — время, до которого следует продвинуть стандартные часы измерения, когда игроки в этом измерении просыпаются после сна.</li>
+                <li><code>minecraft:roll_village_siege</code> — момент времени стандартных часов измерения, в который должна быть вычислена случайная вероятность начала осады деревни.</li>
+            </ul>
+            <h3>Мировые часы</h3>
+            <p>Мировые часы содержат внутреннее время, которое увеличивается каждый такт. Они могут быть определены в наборах данных в реестре <code>world_clock</code> (по пути <code>data/&lt;namespace&gt;/world_clock/&lt;id&gt;.json</code>).<br>
+            Мировые часы могут быть приостановлены или возобновлены, а их время может быть изменено или запрошено с помощью команды <code>/time</code>.<br>
+            <strong>Формат:</strong> объект без полей</p>
         </div>
 
-        <!-- Сделки -->
+        <!-- Наборы сделок -->
+        <div class="section" id="trade-sets">
+            <h2>📊 Наборы сделок <span class="badge-new">Новое</span></h2>
+            <p>Находятся в папке <code>trade_set</code> и используются деревенскими жителями и странствующими торговцами.<br>
+            В настоящее время существуют только жёстко закодированные варианты в папках &lt;профессия&gt;/level_&lt;уровень&gt; для деревенских жителей и в папках wandering_trader/buying, wandering_trader/special, wandering_trader/common для странствующих торговцев.</p>
+            <p><strong>Формат записи:</strong><br>
+            <code>trades</code> — идентификатор сделки деревенского жителя, список идентификаторов сделок с определённым пространством имён или тег сделки с префиксом хеша, которые определяют сделки, входящие в этот набор.<br>
+            <code>amount</code> — числовой параметр, представляющий количество сделок, которые будут сгенерированы из этого набора при использовании.<br>
+            <code>allow_duplicates</code> — логическое значение, указывающее, может ли набор сделок использовать одну и ту же сделку несколько раз для генерации. По умолчанию false.<br>
+            <code>random_sequence</code> — необязательная именованная случайная последовательность, определяющая, какие сделки будут сгенерированы.</p>
+            <div class="code-block">{
+  "amount": 2.0,
+  "trades": "#minecraft:armorer/level_1",
+  "random_sequence": "minecraft:trade_set/armorer/level_1",
+  "allow_duplicates": true
+}</div>
+        </div>
+
+        <!-- Отладочный рендерер -->
+        <div class="section" id="debug-renderer">
+            <h2>🔍 Отладочный рендерер карты освещения <span class="badge-new">Новое</span></h2>
+            <p>Добавлен новый отладочный рендерер для карты освещения, который можно включить с помощью сочетания клавиш <kbd>F3</kbd> + <kbd>4</kbd>.<br>
+            Несовместим с графиками FPS/TPS и сетевыми графиками.<br>
+            Отображает текстуру карты освещения в реальном времени в правом нижнем углу экрана.<br>
+            Вертикальная ось текстуры представляет уровни небесного освещения (0-15 снизу вверх).<br>
+            Горизонтальная ось текстуры представляет уровни освещения от блоков (0-15 слева направо).<br>
+            Цвет каждого пикселя представляет собой результирующий цвет, который будет применён к блокам и сущностям, которые освещаются соответствующими уровнями освещения блоков и неба.</p>
+        </div>
+
+        <!-- Поставщики чисел и предикаты -->
+        <div class="section" id="number-providers">
+            <h2>🔢 Поставщики чисел и предикаты <span class="badge-new">Новое</span></h2>
+            <h3><code>minecraft:environment_attribute</code></h3>
+            <p>Получает и предоставляет значение атрибута окружения (которое может быть представлено числом). Этот поставщик требует контекста с заданной позицией origin, пока атрибут окружения может изменяться по позиции.<br>
+            <strong>Формат:</strong> объект с полями: <code>attribute</code> — идентификатор атрибута окружения для получения.<br>
+            Пример: <code>{type: 'environment_attribute', attribute: 'gameplay/sky_light_level'}</code></p>
+            
+            <h3><code>minecraft:sum</code></h3>
+            <p>Выводит сумму списка поставщиков чисел.<br>
+            <strong>Поля:</strong> <code>summands</code> — список поставщиков чисел.</p>
+            
+            <h3><code>minecraft:environment_attribute_check</code></h3>
+            <p>Предикат проверки добычи, точно соответствующий значению атрибута окружения в заданной позиции. Для этого предиката требуется контекст с заданной позицией origin, если атрибут окружения может изменяться в зависимости от позиции.<br>
+            <strong>Формат:</strong> объект с полями: <code>attribute</code> — идентификатор атрибута окружения для проверки; <code>value</code> — точное значение атрибута окружения для сопоставления.<br>
+            Пример: <code>{condition: 'environment_attribute_check', attribute: 'gameplay/piglins_zombify', value: true}</code></p>
+        </div>
+
+        <!-- Сделки управляемые данными -->
         <div class="section" id="data-trades">
-            <h2>📊 Сделки, управляемые данными</h2>
-            <p>Сделки жителей и странствующих торговцев теперь полностью настраиваются через JSON в папках <code>trade_set</code> и <code>villager_trade</code>.</p>
-            <div class="code-block">
-{
-  "wants": { "id": "minecraft:emerald" },
-  "additional_wants": { "id": "minecraft:book" },
-  "gives": { "id": "minecraft:enchanted_book", "count": 1 },
-  "max_uses": 12,
-  "xp": 1,
-  "merchant_predicate": { ... }
-}
-            </div>
-            <p>🔹 Можно указывать <code>given_item_modifiers</code>, предикаты, теги чар, влияющие на цену (<code>#double_trade_price</code>).</p>
+            <h2>💼 Сделки, управляемые данными <span class="badge-new">Новое</span></h2>
+            <p>Сделки деревенских жителей и странствующих торговцев теперь управляются данными, благодаря чему могут быть настроены разработчиками наборов данных.<br>
+            Сделки деревенских жителей находятся в папке <code>villager_trade</code> и представляют собой основу для торговли, которая используется жителями и странствующими торговцами для генерации фактических сделок.</p>
+            <p><strong>Формат записи:</strong><br>
+            <code>wants</code> — объект, представляющий тип предмета и количество предметов, необходимых для торговли (<code>id</code>, <code>count</code>, <code>components</code>).<br>
+            <code>additional_wants</code> — необязательный объект, представляющий дополнительный предмет для продажи торговцу.<br>
+            <code>gives</code> — объект, представляющий собой итоговый предмет, купленный торговцем.<br>
+            <code>given_item_modifiers</code> — необязательный список модификаторов, применяемых к предмету в процессе торговли.<br>
+            <code>max_uses</code> — максимальное количество использований (по умолчанию 4).<br>
+            <code>reputation_discount</code> — влияние скидок на стоимость (по умолчанию 0.0).<br>
+            <code>xp</code> — количество опыта торговца (по умолчанию 1).<br>
+            <code>merchant_predicate</code> — предикат условий для торговца.<br>
+            <code>double_trade_price_enchantments</code> — идентификаторы чар, удваивающих стоимость.</p>
+            <div class="code-block">{
+  "additional_wants": {
+    "id": "minecraft:book"
+  },
+  "double_trade_price_enchantments": "#minecraft:double_trade_price",
+  "given_item_modifiers": [
+    {
+      "function": "minecraft:enchant_randomly",
+      "include_additional_cost_component": true,
+      "only_compatible": false,
+      "options": "#minecraft:trades/desert_common"
+    },
+    {
+      "function": "minecraft:filtered",
+      "item_filter": {
+        "items": "minecraft:enchanted_book",
+        "predicates": {
+          "minecraft:stored_enchantments": [{}]
+        }
+      },
+      "on_fail": {
+        "function": "minecraft:discard"
+      }
+    }
+  ],
+  "gives": {
+    "count": 1,
+    "id": "minecraft:enchanted_book"
+  },
+  "max_uses": 12.0,
+  "merchant_predicate": {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "predicates": {
+        "minecraft:villager/variant": "minecraft:desert"
+      }
+    }
+  },
+  "reputation_discount": 0.2,
+  "wants": {
+    "id": "minecraft:emerald"
+  }
+}</div>
         </div>
 
-        <!-- Теги -->
-        <div class="section" id="tags">
-            <h2>🏷️ Новые теги блоков, предметов и сущностей</h2>
-            <h3>Теги для растительности:</h3>
+        <!-- Теги для блоков -->
+        <div class="section" id="block-tags">
+            <h2>🏷️ Теги для блоков <span class="badge-new">Новое</span></h2>
+            <h3><code>#supports_vegetation</code></h3>
+            <p>Блоки, на которых могут находиться следующие блоки:</p>
+            <ul class="plant-list">
+                <li>Белый тюльпан</li><li>Василёк</li><li>Высокая трава</li><li>Глазоцвет</li>
+                <li>Красный тюльпан</li><li>Кувшинка</li><li>Кувшинница</li><li>Куст сладких ягод</li>
+                <li>Куст со светлячками</li><li>Куст</li><li>Лук-батун</li><li>Мак</li>
+                <li>Нивяник</li><li>Низкая трава</li><li>Одуванчик</li><li>Оранжевый тюльпан</li>
+                <li>Папоротник</li><li>Пион</li><li>Подсолнечник</li><li>Полевые цветы</li>
+                <li>Раскидистый папоротник</li><li>Розовые лепестки</li><li>Розовый куст</li>
+                <li>Розовый тюльпан</li><li>Саженец</li><li>Синяя орхидея</li><li>Факельник</li><li>Хаустония серая</li>
+            </ul>
+            
+            <h3><code>#supports_crops</code></h3>
+            <p>Блоки, на которых могут быть размещены следующие культуры на всех стадиях роста: Картофель, Кувшинница, Морковь, Пшеница, Росток факельника, Свёкла.</p>
+            
+            <h3>Другие теги для блоков:</h3>
             <div class="tag-list">
-                <span class="tag">#supports_vegetation</span>
-                <span class="tag">#supports_crops</span>
+                <span class="tag">#supports_stem_crops</span>
+                <span class="tag">#supports_pumpkin_stem</span>
+                <span class="tag">#supports_melon_stem</span>
                 <span class="tag">#supports_sugar_cane</span>
+                <span class="tag">#supports_sugar_cane_adjacently</span>
                 <span class="tag">#supports_cactus</span>
+                <span class="tag">#supports_chorus_plant</span>
+                <span class="tag">#supports_chorus_flower</span>
+                <span class="tag">#supports_nether_sprouts</span>
+                <span class="tag">#supports_azalea</span>
+                <span class="tag">#supports_warped_fungus</span>
+                <span class="tag">#supports_crimson_fungus</span>
+                <span class="tag">#supports_mangrove_propagule</span>
+                <span class="tag">#supports_hanging_mangrove_propagule</span>
+                <span class="tag">#supports_nether_wart</span>
+                <span class="tag">#supports_warped_roots</span>
+                <span class="tag">#supports_crimson_roots</span>
+                <span class="tag">#supports_wither_rose</span>
+                <span class="tag">#supports_cocoa</span>
+                <span class="tag">#supports_lily_pad</span>
+                <span class="tag">#supports_frogspawn</span>
+                <span class="tag">#support_override_cactus_flower</span>
+                <span class="tag">#cannot_support_seagrass</span>
+                <span class="tag">#cannot_support_kelp</span>
                 <span class="tag">#grows_crops</span>
                 <span class="tag">#enables_bubble_column_drag_down</span>
                 <span class="tag">#enables_bubble_column_push_up</span>
             </div>
-            <h3>Теги для предметов:</h3>
+            
+            <h3>Тег #dirt разделён на несколько тегов:</h3>
+            <div class="tag-list">
+                <span class="tag">#dirt</span> (земля, каменистая земля, корнистая земля)
+                <span class="tag">#mud</span> (грязь, грязные мангровые корни)
+                <span class="tag">#moss_blocks</span> (блок мха, блок бледного мха)
+                <span class="tag">#grass_blocks</span> (дёрн, мицелий, подзол)
+                <span class="tag">#substrate_overworld</span> (содержит #dirt, #mud, #moss_blocks, #grass_blocks)
+            </div>
+            
+            <h3>Дополнительные теги:</h3>
+            <div class="tag-list">
+                <span class="tag">#beneath_tree_podzol_replaceable</span>
+                <span class="tag">#beneath_bamboo_podzol_replaceable</span>
+                <span class="tag">#cannot_replace_below_tree_trunk</span>
+                <span class="tag">#forest_rock_can_place_on</span>
+                <span class="tag">#huge_brown_mushroom_can_place_on</span>
+                <span class="tag">#huge_red_mushroom_can_place_on</span>
+                <span class="tag">#ice_spike_replaceable</span>
+                <span class="tag">#prevents_nearby_leaf_decay</span>
+            </div>
+        </div>
+
+        <!-- Теги для жидкостей -->
+        <div class="section" id="fluid-tags">
+            <h2>💧 Теги для жидкостей <span class="badge-new">Новое</span></h2>
+            <div class="tag-list">
+                <span class="tag">#supports_lily_pad</span>
+                <span class="tag">#supports_frogspawn</span>
+                <span class="tag">#supports_sugar_cane_adjacently</span>
+                <span class="tag">#bubble_columns_can_occupy</span>
+            </div>
+        </div>
+
+        <!-- Теги для зелий -->
+        <div class="section" id="potion-tags">
+            <h2>🧪 Теги для зелий <span class="badge-new">Новое</span></h2>
+            <div class="tag-list">
+                <span class="tag">#tradeable</span> — все эффекты зелий, которые могут появиться в сделках с деревенскими жителями.
+            </div>
+        </div>
+
+        <!-- Теги для предметов -->
+        <div class="section" id="item-tags">
+            <h2>📦 Теги для предметов <span class="badge-new">Новое</span></h2>
             <div class="tag-list">
                 <span class="tag">#metal_nuggets</span>
                 <span class="tag">#dyes</span>
                 <span class="tag">#loom_dyes</span>
+                <span class="tag">#loom_patterns</span>
                 <span class="tag">#cat_collar_dyes</span>
                 <span class="tag">#wolf_collar_dyes</span>
+                <span class="tag">#cauldron_can_remove_dye</span>
+                <span class="tag">#mud</span>
+                <span class="tag">#moss_blocks</span>
+                <span class="tag">#grass_blocks</span>
             </div>
-            <h3>Тег для сущностей:</h3>
-            <div class="tag-list"><span class="tag">#cannot_be_age_locked</span> — мобы, на которых не действует золотой одуванчик.</div>
-            <h3>Теги сделок:</h3>
-            <p><code>#&lt;профессия&gt;/level_&lt;уровень&gt;</code>, <code>#wandering_trader/buying</code>, <code>#wandering_trader/common</code> и другие.</p>
+            <h3>Теги для сделок:</h3>
+            <div class="tag-list">
+                <span class="tag">#&lt;профессия&gt;/level_&lt;уровень&gt;</span>
+                <span class="tag">#common_smith/level_&lt;level&gt;</span>
+                <span class="tag">#wandering_trader/buying</span>
+                <span class="tag">#wandering_trader/special</span>
+                <span class="tag">#wandering_trader/common</span>
+            </div>
         </div>
 
-        <!-- Детёныши -->
-        <div class="section" id="baby-mobs">
-            <h2>🐣 Детёныши: новые модели, текстуры и звуки</h2>
-            <p>Полностью обновлены модели и текстуры детёнышей всех мобов (кроме гастят и наутилусов).<br>
-            🔹 Добавлены <strong>звуковые вариации</strong> для котят, волчат, поросят, жеребят, цыплят.<br>
-            🔹 Седло и броня больше не отображаются на детёнышах свиней, верблюдов, волков.<br>
-            🔹 Дети жителей и зомби-жителей получили слоистую модель поверх базовой.<br>
-            🔹 Новые звуковые события: <code>entity.baby_cat.ambient</code>, <code>entity.baby_wolf.growl</code>, <code>entity.baby_horse.eat</code> и многие другие.<br>
-            🔹 Добавлены звуковые вариации для взрослых: <code>cat_royal</code>, <code>pig_mini/big</code>, <code>cow_moody</code>, <code>chicken_picky</code>.</p>
-            <div class="note">📁 Все текстуры детёнышей находятся в папках <code>entity/.../baby/</code> и переименованы согласно новой структуре.</div>
+        <!-- Теги для сущностей -->
+        <div class="section" id="entity-tags">
+            <h2>👾 Теги для сущностей <span class="badge-new">Новое</span></h2>
+            <div class="tag-list"><span class="tag">#cannot_be_age_locked</span></div>
+            <p>Определяет, у каких мобов рост детёнышей нельзя остановить золотым одуванчиком.</p>
         </div>
 
-        <!-- Технические изменения -->
-        <div class="section" id="technical">
-            <h2>⚙️ Технические изменения и улучшения</h2>
-            <h3>📁 Структура мира (level.dat)</h3>
-            <ul>
-                <li>Тег <code>player</code> заменён на <code>singleplayer_uuid</code>.</li>
-                <li>Настройки сложности — строковые: <code>peaceful, easy, normal, hard</code>.</li>
-                <li>Данные битвы с драконом, погоды, правил, карт перемещены в <code>data/minecraft/</code>.</li>
-                <li>Папки измерений: <code>dimensions/minecraft/overworld</code>, <code>the_nether</code>, <code>the_end</code>.</li>
-                <li>Данные игроков: <code>players/advancements</code>, <code>players/data</code>, <code>players/stats</code>.</li>
-            </ul>
-            <h3>🔄 Рецепты</h3>
-            <p>Добавлены новые типы рецептов: <code>minecraft:crafting_dye</code>, <code>minecraft:crafting_imbue</code>, <code>minecraft:crafting_transmute</code> с расширенными настройками. Удалены устаревшие специальные рецепты (карт, клонирования книг и т.д.).</p>
-            <h3>🎨 Модели предметов</h3>
-            <p>Поле <code>transformation</code> добавлено во все типы моделей. Новые специальные модели: <code>minecraft:bell</code>, <code>minecraft:book</code>, <code>minecraft:end_cube</code>. Модели кроватей, флагов, сундуков теперь используют <code>part</code>, <code>attachment</code>, <code>chest_type</code>.</p>
-            <h3>🧩 Компоненты данных</h3>
-            <p>🔸 <code>minecraft:dye</code> — цвет красителя (white, orange, magenta, …).<br>
-            🔸 <code>minecraft:additional_trade_cost</code> — временная модификация цены в сделках.<br>
-            🔸 <code>minecraft:provides_banner_patterns</code> теперь принимает список ID.</p>
-            <h3>📈 Поставщики чисел и предикаты</h3>
-            <p>Добавлены <code>minecraft:environment_attribute</code>, <code>minecraft:sum</code>, предикат <code>minecraft:environment_attribute_check</code>, поставщик целых чисел <code>trapezoid</code>.</p>
-            <h3>🖥️ Системные изменения</h3>
-            <ul>
-                <li>Требуется Java 25 (Microsoft OpenJDK 25).</li>
-                <li>По умолчанию выделяется 4 ГБ RAM, сборщик мусора ZGC (для совместимых устройств).</li>
-                <li>Новый отладочный рендерер карты освещения (F3+4).</li>
-                <li>Опция «Эксклюзивный полноэкранный режим» (требует перезапуска).</li>
-                <li>Улучшена поддержка IME (редакторов ввода) под Windows/macOS.</li>
-            </ul>
-            <h3>🔊 Звуки трубы для музыкального блока</h3>
-            <p>На медных блоках музыкальный блок играет звуки трубы, меняющиеся в зависимости от стадии окисления: <code>block.note_block.trumpet</code>, <code>..._exposed</code>, <code>..._weathered</code>, <code>..._oxidized</code>.</p>
+        <!-- Компоненты данных -->
+        <div class="section" id="components">
+            <h2>🧩 Компоненты данных <span class="badge-new">Новое</span></h2>
+            <h3><code>minecraft:additional_trade_cost</code></h3>
+            <p>Временный компонент, используемый для изменения необходимого количества предметов, которые можно купить у жителя; удаляется после генерации сделки. Формат: целое число.</p>
+            <h3><code>minecraft:dye</code></h3>
+            <p>Определяет цвет красителя. Используется в тех случаях, в которых ранее использовался определённый предмет красителя, включая взаимодействие с мобами и блоками. Формат: один из следующих цветов: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black.</p>
         </div>
 
-        <!-- Исправления -->
+        <!-- Функции добычи -->
+        <div class="section" id="loot-functions">
+            <h2>🎲 Функции добычи <span class="badge-new">Новое</span></h2>
+            <p>Добавлен тип таблицы добычи <code>minecraft:villager_trade</code>, который принимает параметры: <code>this</code> — сущность, предлагающая торговлю; <code>origin</code> — позиция блока у ног сущности.</p>
+            <h3><code>minecraft:set_random_dyes</code></h3>
+            <p>Аддитивно добавляет красители к компоненту предмета <code>minecraft:dyed_color</code>, если предмет находится в теге #dyeable. Поля: <code>conditions</code> — условия для применения функции; <code>number_of_dyes</code> — числовой поставщик, представляющий количество случайных красителей из шестнадцати, которые будут применены к предмету.</p>
+            <h3><code>minecraft:set_random_potion</code></h3>
+            <p>Случайным образом устанавливает компонент данных <code>minecraft:potion_contents</code> для предмета. Поля: <code>conditions</code> — условия применения функции; <code>options</code> — необязательный идентификатор зелья, список идентификаторов зелий с пространством имён или тег зелья с префиксом хеша, которые представляют возможные зелья для выбора.</p>
+        </div>
+
+        <!-- Частицы -->
+        <div class="section" id="particles">
+            <h2>✨ Частицы <span class="badge-new">Новое</span></h2>
+            <div class="tag-list">
+                <span class="tag">pause_mob_growth</span>
+                <span class="tag">reset_mob_growth</span>
+            </div>
+            <p>Испускаются детёнышем, когда его рост был остановлен или возобновлён золотым одуванчиком.</p>
+        </div>
+
+        <!-- Изменения блоков -->
+        <div class="section" id="changes-blocks">
+            <h2>🧱 Изменения блоков</h2>
+            <h3>Камнерез</h3>
+            <p>Из глубинного сланца на камнерезе теперь можно изготовить дроблёный и полированный варианты, а также кирпичи и плитняк. Из камня на камнерезе теперь можно изготовить булыжник и другие блоки из булыжника.</p>
+            <h3>Музыкальный блок</h3>
+            <p>Добавлен новый инструмент — труба. Можно воспроизвести, поставив музыкальный блок на медный блок. Воспроизводимые звуки меняются в зависимости от стадии окисления: <code>block.note_block.trumpet</code>, <code>block.note_block.trumpet_exposed</code>, <code>block.note_block.trumpet_oxidized</code>, <code>block.note_block.trumpet_weathered</code>.</p>
+            <h3>Растяжка</h3>
+            <p>Текстура растяжки теперь отрисовывается как альфа-канал, а не как прозрачная.</p>
+        </div>
+
+        <!-- Изменения предметов -->
+        <div class="section" id="changes-items">
+            <h2>🔧 Изменения предметов</h2>
+            <h3>Бирка</h3>
+            <p>Теперь создаётся из 1 бумаги и 1 любого кусочка (золота, железа, меди).<br>
+            Теперь может быть куплена у странствующего торговца за 1 изумруд с шансом 7%. В рамках одной сделки бирку можно купить 5 раз.<br>
+            Больше не может быть куплена у библиотекаря уровня «Мастер».<br>
+            Больше не может быть найдена в сундуках древнего города и лесного особняка.</p>
+            <h3>Копьё</h3>
+            <p>Пороговые значения, при которых копьё может сбросить противника с ездового животного, приведены к значениям из Bedrock Edition.</p>
+            <h3>Мешок</h3>
+            <p>Теперь поддерживает компонент <code>bundle_container</code> с весом больше 2³¹−1, что эквивалентно 2³¹−1 стопкам предметов. Ранее компонент удалялся при превышении лимита. Мешок, превышающий этот лимит, отображается как полный, однако при попытке очистить его, добавить новый предмет или просмотреть всплывающую подсказку он будет отображаться пустым.</p>
+            <h3>Стопка предметов</h3>
+            <p>Теперь во многих случаях считается пустой, если содержит конфликтующие данные, например, если количество предметов превышает max_stack_size или если max_stack_size больше единицы вместе с max_damage. Шалкеровый ящик, содержащий стопку предметов с конфликтующими данными, будет отображать в подсказке «Воздух x0», а при его размещении такая стопка будет удалена. Выстрел стрелой с конфликтующими данными из арбалета не будет засчитан.</p>
+        </div>
+
+        <!-- Изменения мобов -->
+        <div class="section" id="changes-mobs">
+            <h2>🐾 Изменения мобов</h2>
+            <h3>Аксолотль</h3>
+            <p>Обновлена анимация детёныша, когда он притворяется мёртвым.</p>
+            <h3>Белый медведь</h3>
+            <p>Детёныш больше не атакует лис в соответствии с Bedrock Edition.</p>
+            <h3>Верблюд-кадавр</h3>
+            <p>Удалена модель детёныша.</p>
+            <h3>Детёныши</h3>
+            <p>Добавлены новые звуки для волчат, котят, поросят, жеребят и цыплят.<br>
+            Обновлены модели и текстуры детёнышей и детей всех мобов, за исключением гастят и детёнышей наутилусов, а также изменены хитбоксы некоторых детёнышей для соответствия их новым моделям.<br>
+            Седло и броня больше не отображаются на поросятах, верблюжатах и волчатах.<br>
+            Детёныши лошади-скелета и лошади-зомби теперь могут быть призваны только с помощью яиц призывания или команд.<br>
+            Дети деревенских жителей и зомби-жителей теперь имеют базовую модель, поверх которой накладываются различные слои.</p>
+            <h3>Коза</h3>
+            <p>Козлёнок теперь вращает головой, когда бодает.</p>
+            <h3>Кролик</h3>
+            <p>Обновлены модель и текстура взрослой особи и детёныша. Текстуры кролика из пакета «Классический» были удалены в связи с обновлением модели.</p>
+            <h3>Курица</h3>
+            <p>Исправлены полосы на тропической курице.</p>
+            <h3>Лошадь</h3>
+            <p>Чубарый окрас взрослой лошади (отметины в виде чёрных пятен) был обновлён, чтобы быть визуально ближе к этому же окрасу у обновлённых жеребят.</p>
+            <h3>Лошадь-зомби и лошадь-скелет</h3>
+            <p>Больше не паникуют при получении урона.</p>
+            <h3>Свинья</h3>
+            <p>Добавлены звуки приёма пищи.</p>
+            <h3>Страйдер</h3>
+            <p>В соответствии с Bedrock Edition цвет маленького страйдера теперь зависит от цвета взрослой особи, на которой он стоит.</p>
+            <h3>Стойка для брони</h3>
+            <p>Маленькая стойка для брони теперь корректно отображает надетую броню.</p>
+        </div>
+
+        <!-- Формат команд -->
+        <div class="section" id="commands">
+            <h2>⌨️ Формат команд</h2>
+            <h3>/fetchprofile</h3>
+            <p>Добавлена новая подкоманда, которая будет выводить информацию о профиле сущности в игровом мире.<br>
+            <strong>Синтаксис:</strong> <code>/fetchprofile entity &lt;селектор отдельной сущности&gt;</code><br>
+            Если у целевой сущности нет профиля (в настоящее время он есть только у игроков и манекенов), эта команда выдаст ошибку.</p>
+            <h3>/time</h3>
+            <p>Команда /time теперь основана на мировых часах. Часы можно дополнительно указать в качестве вводных данных с помощью <code>/time of &lt;clock&gt; ...</code>. Если часы не указаны, используются часы, стандартные для данного измерения. Возвращаемое значение из подкоманд set и add теперь представляет собой общее количество прошедших тактов часов вместо текущего времени суток.</p>
+            <div class="code-block">/time [of &lt;clock&gt;] set &lt;time&gt; — устанавливает общее количество прошедших тактов часов.
+/time [of &lt;clock&gt;] set &lt;timemarker&gt; — переводит часы вперёд к следующему появлению временной метки.
+/time [of &lt;clock&gt;] add &lt;time&gt; — добавляет такты к часам; может быть отрицательным или положительным числом.
+/time [of &lt;clock&gt;] pause — приостанавливает часы.
+/time [of &lt;clock&gt;] resume — возобновляет часы.
+/time [of &lt;clock&gt;] query &lt;timeline&gt; — отображает и возвращает текущее количество тактов в периоде таймлайна.
+/time [of &lt;clock&gt;] query &lt;timeline&gt; repetitions — отображает и возвращает количество повторений периода таймлайна.
+/time [of &lt;clock&gt;] query time — отображает и возвращает общее количество прошедших тактов часов.
+/time query gametime — как и прежде, общее количество прошедших тактов в игровом мире.
+/time [of &lt;clock&gt;] rate &lt;rate&gt; — устанавливает множитель скорости, с которым течёт время. rate — число с плавающей точкой от 0 (исключая) до 1000 (включительно).</div>
+        </div>
+
+        <!-- Изменения мира -->
+        <div class="section" id="world-changes">
+            <h2>🌍 Изменения мира и level.dat</h2>
+            <p>Тег <code>player</code> заменён на тег <code>singleplayer_uuid</code>, указывающий на используемый файл данных игрока.<br>
+            Настройки сложности перемещены в тег <code>difficulty_settings</code>.<br>
+            Значение <code>Difficulty</code> переименовано в <code>difficulty</code> и теперь является строковым: peaceful, easy, normal, hard.<br>
+            Значение <code>DifficultyLocked</code> переименовано в <code>locked</code>.<br>
+            Данные для битвы с эндер-драконом перемещены в папку data: <code>dimensions/minecraft/the_end/data/minecraft/ender_dragon_fight.dat</code>.<br>
+            Битву с эндер-драконом можно активировать и в других измерениях.<br>
+            Изменения данных битвы с драконом: <code>NeedsStateScanning</code> → <code>needs_state_scanning</code>, <code>DragonKilled</code> → <code>dragon_killed</code>, <code>PreviouslyKilled</code> → <code>previously_killed</code>, <code>IsRespawning</code> → <code>respawn_stage</code> (start, preparing_to_summon_pillars, summoning_pillars, summoning_dragon, end), <code>Dragon</code> → <code>dragon_uuid</code>, <code>ExitPortalLocation</code> → <code>exit_portal_location</code>, <code>Gateways</code> → <code>gateways</code>. Добавлены <code>respawn_time</code> и <code>respawn_crystals</code>.<br>
+            Данные странствующего торговца: <code>data/minecraft/wandering_trader.dat</code>. Удалено <code>WanderingTraderId</code>, переименованы <code>WanderingTraderSpawnChance</code> → <code>spawn_chance</code>, <code>WanderingTraderSpawnDelay</code> → <code>spawn_delay</code>.<br>
+            Данные погоды: <code>data/minecraft/weather.dat</code>. Переименованы <code>clearWeatherTime</code> → <code>clear_weather_time</code>, <code>rainTime</code> → <code>rain_time</code>, <code>thunderTime</code> → <code>thunder_time</code>.<br>
+            Данные игроков перемещены в подкаталог <code>players</code>: advancements, playerdata, stats.<br>
+            Все стандартные измерения теперь хранятся в подпапке <code>dimensions</code>: <code>dimensions/minecraft/overworld</code>, <code>dimensions/minecraft/the_nether</code>, <code>dimensions/minecraft/the_end</code>.<br>
+            Пакет ресурсов мира (<code>resources.zip</code>) перемещён в подкаталог <code>resourcepacks</code>.<br>
+            Данные, сохранённые в папке data, теперь имеют пространство имён.<br>
+            Файл <code>chunks.dat</code> переименован в <code>chunk_tickets.dat</code>.<br>
+            Данные для карт теперь хранятся в <code>data/minecraft/maps</code>.<br>
+            Файл <code>idcounts.dat</code> переименован в <code>last_id.dat</code>.<br>
+            Особый случай <code>raids_end.dat</code> больше не используется. Энд теперь использует <code>raids.dat</code>.<br>
+            Структуры, сохранённые структурными блоками, перемещены из <code>generated/namespace/structures</code> в <code>generated/namespace/structure</code>.</p>
+        </div>
+
+        <!-- Алгоритм освещения -->
+        <div class="section" id="lighting">
+            <h2>💡 Алгоритм карт освещения</h2>
+            <p>Был заменён на новый алгоритм, который в целом должен давать те же результаты, но имеет следующие отличия:<br>
+            • Он проще и понятнее, благодаря чему был исправлен ряд ошибок предыдущего алгоритма карт освещения.<br>
+            • Эффект «Тьма» и затемнение неба при битве с иссушителем теперь работают одинаково во всех измерениях.<br>
+            • Эффект «Ночное зрение» теперь просто добавляет окружающее освещение, а не масштабирует результирующие цвета.<br>
+            • Это означает, что полностью тёмные области больше не выглядят ярче, чем области, освещённые блоками или небесными телами.<br>
+            • Составляющие алгоритма, такие как оттенок света от блоков, цвет окружающего освещения и цвета при эффекте «Ночное зрение», теперь управляются данными через атрибуты окружения.</p>
+        </div>
+
+        <!-- Генерация мира -->
+        <div class="section" id="worldgen">
+            <h2>🏔️ Генерация мира</h2>
+            <p>В настройках поставщиков состояния блоков на основе правил произошли изменения: их параметр <code>fallback</code> стал необязательным и может быть пустым.<br>
+            Декорация <code>forest_rock</code> переименована в <code>block_blob</code>. Конфигурация декорации <code>block_blob</code> изменена для поддержки параметров: <code>state</code> — блок, из которого сделан валун; <code>can_place_on</code> — предикат блока.<br>
+            Декорация <code>ice_spike</code> переименована в <code>spike</code>. Конфигурация поддерживает: <code>state</code>, <code>can_place_on</code>, <code>can_replace</code>.<br>
+            Конфигурации декораций <code>huge_red_mushroom</code> и <code>huge_brown_mushroom</code> получили параметр <code>can_place_on</code>.<br>
+            В конфигурации декорации <code>tree</code> параметры <code>force_dirt</code> и <code>dirt_provider</code> заменены одним поставщиком состояния блока <code>below_trunk_provider</code>.<br>
+            Поставщики состояния блоков теперь имеют новый тип — <code>rule_based_state_provider</code>. Теперь они могут использоваться в конфигурациях всех декораций.<br>
+            Декорации, создаваемые из костной муки, больше не ограничиваются типом декорации flower и вместо этого управляются тегом <code>#can_spawn_from_bone_meal</code>.<br>
+            Типы декораций <code>flower</code>, <code>flower_no_bonemeal</code> и <code>random_patch</code> были удалены.<br>
+            Добавлен поставщик целых чисел <code>trapezoid</code> с полями: <code>min</code>, <code>max</code>, <code>plateau</code>.<br>
+            Модификатор размещения <code>count</code> теперь ограничен диапазоном от 0 до 4096, а не до 256.</p>
+        </div>
+
+        <!-- Звуки -->
+        <div class="section" id="sounds">
+            <h2>🔊 Звуки</h2>
+            <h3>Новые звуковые события для котёнка:</h3>
+            <div class="tag-list">
+                <span class="tag">entity.baby_cat.ambient</span>
+                <span class="tag">entity.baby_cat.hiss</span>
+                <span class="tag">entity.baby_cat.hurt</span>
+                <span class="tag">entity.baby_cat.death</span>
+                <span class="tag">entity.baby_cat.eat</span>
+                <span class="tag">entity.baby_cat.beg_for_food</span>
+                <span class="tag">entity.baby_cat.purr</span>
+                <span class="tag">entity.baby_cat.purreow</span>
+                <span class="tag">entity.baby_cat.stray_ambient</span>
+            </div>
+            <h3>Новые звуковые события для поросёнка:</h3>
+            <div class="tag-list">
+                <span class="tag">entity.baby_pig.ambient</span>
+                <span class="tag">entity.baby_pig.hurt</span>
+                <span class="tag">entity.baby_pig.death</span>
+                <span class="tag">entity.baby_pig.step</span>
+                <span class="tag">entity.baby_pig.eat</span>
+            </div>
+            <h3>Новые звуковые события для волчонка:</h3>
+            <div class="tag-list">
+                <span class="tag">entity.baby_wolf.ambient</span>
+                <span class="tag">entity.baby_wolf.growl</span>
+                <span class="tag">entity.baby_wolf.death</span>
+                <span class="tag">entity.baby_wolf.hurt</span>
+                <span class="tag">entity.baby_wolf.pant</span>
+                <span class="tag">entity.baby_wolf.whine</span>
+                <span class="tag">entity.baby_wolf.step</span>
+            </div>
+            <h3>Новые звуковые события для жеребёнка:</h3>
+            <div class="tag-list">
+                <span class="tag">entity.baby_horse.ambient</span>
+                <span class="tag">entity.baby_horse.hurt</span>
+                <span class="tag">entity.baby_horse.death</span>
+                <span class="tag">entity.baby_horse.angry</span>
+                <span class="tag">entity.baby_horse.eat</span>
+                <span class="tag">entity.baby_horse.fall</span>
+                <span class="tag">entity.baby_horse.land</span>
+                <span class="tag">entity.baby_horse.step</span>
+                <span class="tag">entity.baby_horse.breathe</span>
+            </div>
+            <h3>Новые звуковые события для цыплёнка:</h3>
+            <div class="tag-list">
+                <span class="tag">entity.baby_chicken.ambient</span>
+                <span class="tag">entity.baby_chicken.hurt</span>
+                <span class="tag">entity.baby_chicken.death</span>
+                <span class="tag">entity.baby_chicken.step</span>
+            </div>
+            <h3>Новые звуковые события для золотого одуванчика:</h3>
+            <div class="tag-list">
+                <span class="tag">item.golden_dandelion.use</span>
+                <span class="tag">item.golden_dandelion.unuse</span>
+            </div>
+            <h3>Новые звуковые события для кошки (royal):</h3>
+            <div class="tag-list">
+                <span class="tag">entity.cat_royal.ambient</span>
+                <span class="tag">entity.cat_royal.hiss</span>
+                <span class="tag">entity.cat_royal.hurt</span>
+                <span class="tag">entity.cat_royal.death</span>
+                <span class="tag">entity.cat_royal.eat</span>
+                <span class="tag">entity.cat_royal.beg_for_food</span>
+                <span class="tag">entity.cat_royal.purr</span>
+                <span class="tag">entity.cat_royal.purreow</span>
+                <span class="tag">entity.cat_royal.stray_ambient</span>
+            </div>
+            <h3>Новые звуковые события для курицы (picky):</h3>
+            <div class="tag-list">
+                <span class="tag">entity.chicken_picky.ambient</span>
+                <span class="tag">entity.chicken_picky.death</span>
+                <span class="tag">entity.chicken_picky.hurt</span>
+                <span class="tag">entity.chicken_picky.step</span>
+            </div>
+            <h3>Новые звуковые события для коровы (moody):</h3>
+            <div class="tag-list">
+                <span class="tag">entity.cow_moody.ambient</span>
+                <span class="tag">entity.cow_moody.death</span>
+                <span class="tag">entity.cow_moody.hurt</span>
+                <span class="tag">entity.cow_moody.step</span>
+            </div>
+            <h3>Звуки трубы у музыкального блока:</h3>
+            <div class="tag-list">
+                <span class="tag">block.note_block.trumpet</span>
+                <span class="tag">block.note_block.trumpet_exposed</span>
+                <span class="tag">block.note_block.trumpet_oxidized</span>
+                <span class="tag">block.note_block.trumpet_weathered</span>
+            </div>
+            <h3>Звуковые вариации мобов:</h3>
+            <p>Кошка — вариация <code>royal</code> (королевская). Свинья — вариации <code>mini</code> (карликовая) и <code>big</code> (большая). Корова — вариация <code>moody</code> (угрюмая). Курица — вариация <code>picky</code> (привередливая). Оригинальные звуки выделены в <code>classic</code> (классическая).<br>
+            Звуковые вариации управляются данными через файлы: <code>cat_sound_variant</code>, <code>pig_sound_variant</code>, <code>cow_sound_variant</code>, <code>chicken_sound_variant</code>.</p>
+        </div>
+
+        <!-- Интерфейс и настройки -->
+        <div class="section" id="gui">
+            <h2>🖥️ Интерфейс и настройки</h2>
+            <p>Добавлена новая опция экрана «Эксклюзивный полноэкранный режим», определяющая, должен ли полноэкранный режим полностью захватывать монитор. По умолчанию false. Любые изменения вступят в силу только после перезапуска игры.<br>
+            Переключение игровых правил теперь доступно через новый экран «Параметры мира» в меню паузы. В верхней части экрана игровых правил добавлена строка поиска.<br>
+            Кнопка для миров, требующих обновления, теперь имеет название «Обновить и играть». Кнопки «Настройка мира» и «Пересоздать» не будут работать, если мир нужно обновить.<br>
+            Варианты редакторов методов ввода (IME) теперь будут отображаться в игре над редактируемым текстовым полем (Windows и macOS).<br>
+            Добавлен спрайт <code>gui/sprites/widget/preedit.png</code> для фона предварительного редактирования в IME.<br>
+            Переключатель сложности в меню паузы заменён кнопкой, ведущей к экрану «Параметры мира».</p>
+        </div>
+
+        <!-- Модели -->
+        <div class="section" id="models">
+            <h2>🎨 Модели блоков и предметов</h2>
+            <p><strong>Модели блоков:</strong> Любая модель блока теперь может поддерживать текстуры с режимом cutout или translucent. Формат карты textures обновлён: добавлено поле <code>force_translucent</code> для принудительного отображения в проходе translucent.<br>
+            <strong>Модели предметов:</strong> Добавлено поле <code>transformation</code> для всех типов моделей (массив из 16 чисел или структура с перемещением, масштабированием, вращением).<br>
+            <strong>Новые особые типы моделей:</strong><br>
+            • <code>minecraft:bell</code> — анимированная часть блока колокола.<br>
+            • <code>minecraft:book</code> — книга с параметрами <code>open_angle</code>, <code>page1</code>, <code>page2</code>.<br>
+            • <code>minecraft:end_cube</code> — куб с текстурными эффектами portal или gateway.<br>
+            <strong>Изменения существующих моделей:</strong><br>
+            • <code>minecraft:bed</code> — поле <code>part</code> (head/foot).<br>
+            • <code>minecraft:banner</code> — поле <code>attachment</code> (wall/ground).<br>
+            • <code>minecraft:chest</code> — поле <code>chest_type</code> (single/left/right).<br>
+            • <code>minecraft:hanging_sign</code> — поле <code>attachment</code> (wall/ceiling/ceiling_middle).<br>
+            • <code>minecraft:standing_sign</code> — поле <code>attachment</code> (wall/ground).<br>
+            • <code>minecraft:shulker_box</code> — удалено поле <code>orientation</code>.</p>
+        </div>
+
+        <!-- Рецепты -->
+        <div class="section" id="recipes">
+            <h2>📜 Рецепты</h2>
+            <p>Поле <code>result</code> теперь принимает сокращённую форму (например, «minecraft:foo»).<br>
+            Тип рецепта <code>minecraft:crafting_special_mapcloning</code> удалён, его применение объединено с <code>minecraft:crafting_transmute</code>.<br>
+            Добавлены поля <code>show_notification</code> для многих типов рецептов.<br>
+            <strong>Новые типы рецептов:</strong><br>
+            • <code>minecraft:crafting_dye</code> — заменяет <code>crafting_special_armordye</code>. Смешивает цвета красителей.<br>
+            • <code>minecraft:crafting_imbue</code> — заменяет <code>crafting_special_tippedarrow</code>. Копирует эффект зелья на стрелы.<br>
+            • <code>minecraft:crafting_transmute</code> — теперь может принимать несколько предметов материала (<code>material_count</code>, <code>add_material_count_to_result</code>).<br>
+            • <code>minecraft:crafting_special_bannerduplicate</code> — теперь настраиваемый.<br>
+            • <code>minecraft:crafting_special_bookcloning</code> — настраиваемый с полями <code>source</code>, <code>material</code>, <code>allowed_generations</code>.<br>
+            • <code>minecraft:crafting_decorated_pot</code> — настраиваемые ингредиенты.<br>
+            • <code>minecraft:crafting_special_firework_rocket</code> — настраиваемые ингредиенты.<br>
+            • <code>minecraft:crafting_special_firework_star</code> — настраиваемые ингредиенты и формы.<br>
+            • <code>minecraft:crafting_special_firework_star_fade</code> — использует компонент dye.<br>
+            • <code>minecraft:crafting_special_mapextending</code> — настраиваемый.<br>
+            • <code>minecraft:crafting_special_shielddecoration</code> — настраиваемый.<br>
+            <strong>Переименованы рецепты камнереза:</strong> <code>chiseled_stone_bricks_from_stone_stonecutting</code>, <code>end_stone_brick_slab_from_end_stone_bricks_stonecutting</code> и другие для единообразия.</p>
+        </div>
+
+        <!-- Исправления (все 89) -->
         <div class="section" id="fixes">
-            <h2>🐛 Исправленные ошибки (выборочно)</h2>
-            <ul>
-                <li>MC-13187 – Вода в котлах с водой стала прозрачной.</li>
-                <li>MC-102774 – Для возрождения дракона Энда теперь нужно больше кристаллов (исправлено).</li>
-                <li>MC-179949 – Команда <code>/item replace</code> теперь работает с инвентарём пиглинов.</li>
-                <li>MC-222949 – Копья с «Подводной хваткой» больше не работают верхом на сущностях.</li>
-                <li>MC-303119 – Кормление кошек и волков в режиме выживания восстанавливает правильное количество здоровья.</li>
-                <li>MC-304446 – Активация стазис-камеры губкой больше не удаляет жемчуг Эндера.</li>
-                <li>MC-305888 – Яйца черепах теперь вылупляются в Незере и Энде.</li>
-                <li>MC-306123 – Волки больше не атакуют игроков на мирной сложности.</li>
-                <li>И ещё более 80 исправлений, включая рендеринг, звуки, поведение мобов и стабильность.</li>
+            <h2>🐛 Исправленные ошибки (89 исправлений)</h2>
+            <ul class="fixes-list">
+                <li>MC-13187 – Water in water cauldrons is not transparent.</li>
+                <li>MC-64087 – Revengeful zombies / Zombie reinforcements will try to attack you in Creative mode.</li>
+                <li>MC-91132 – No cross-platform CJK IME support.</li>
+                <li>MC-98631 – The heights of shields in first person are different depending on what hand you have them held in.</li>
+                <li>MC-99647 – The "below_name" scoreboard display slot doesn't work with non-player entities.</li>
+                <li>MC-102774 – You can respawn the ender dragon with only two end crystals.</li>
+                <li>MC-129886 – Trying to place a block underneath min_y does not give an error message.</li>
+                <li>MC-131745 – Shipwrecks sometimes generate split into different variants at chunk boundaries.</li>
+                <li>MC-134573 – The game freezes while doing a world backup.</li>
+                <li>MC-153831 – Trader llamas spawned from breeding can despawn.</li>
+                <li>MC-163978 – Mobs can spawn on moving blocks.</li>
+                <li>MC-178713 – Bone meal can be used on certain plants at build height, but they don't grow.</li>
+                <li>MC-179949 – You cannot edit the inventories of piglins by using /item replace.</li>
+                <li>MC-181169 – Skeleton trapped horses with PersistenceRequired still despawn.</li>
+                <li>MC-184432 – There is no warning when plants are bonemealed, but cannot grow above or below world height limits.</li>
+                <li>MC-184433 – When applying bone meal to grass / ferns / nether fungi at the upper build limit, there is no warning, and the taller part of the plant is cut off.</li>
+                <li>MC-195237 – End portals and End gateways held by endermen or as block display entities are not rendered, but Nether portals are.</li>
+                <li>MC-197497 – Smooth lighting transition from level 1 to 0 is not smooth.</li>
+                <li>MC-199589 – Hitting mobs in Creative mode then switching into Survival causes the mob to target you.</li>
+                <li>MC-199975 – Endermen holding bells or bell block display entities only render the bell frame.</li>
+                <li>MC-219981 – Leader zombie-type mobs spawn with 20 health despite having an increased maximum health.</li>
+                <li>MC-222949 – You can use tridents enchanted with riptide while riding entities.</li>
+                <li>MC-230746 – Pointed dripstone does not grow with a waterlogged block 2 blocks above it but does fill cauldrons.</li>
+                <li>MC-231663 – Dragon eggs do not check whether there is a block under their destination when teleporting.</li>
+                <li>MC-233911 – Sleeping in a bed and waking up no longer instantly sets the daytime sky.</li>
+                <li>MC-248092 – Untamed cats on lead despawn when attached to fence post.</li>
+                <li>MC-254785 – Bone meal is used when clicked on a bamboo stalk with a block above it.</li>
+                <li>MC-257362 – Particles from breaking frogspawn are transparent.</li>
+                <li>MC-259032 – /data produces a positive result for low negative numbers.</li>
+                <li>MC-260148 – show_notification only works for shaped crafting recipes.</li>
+                <li>MC-263488 – The item texture of pink petals has a misplaced transparent pixel.</li>
+                <li>MC-264155 – Bone meal doesn't work on grass blocks beneath cave air or void air.</li>
+                <li>MC-264187 – Spawners with their light limits set to ranges that don't include 15 don't spawn mobs under the night sky.</li>
+                <li>MC-273228 – Crash when generating water lakes using a custom worldgen datapack.</li>
+                <li>MC-274238 – Persistent trader llamas will still despawn when leashed to wandering traders.</li>
+                <li>MC-275014 – Weathered and oxidized copper bulbs cast stronger shadows on themselves when lit with smooth lighting enabled.</li>
+                <li>MC-297536 – Z-fighting occurs on the debug crosshair.</li>
+                <li>MC-298136 – The aura of beacon beams now always renders behind block entities.</li>
+                <li>MC-299730 – Dumping textures while using a TTF font crashes the game.</li>
+                <li>MC-299992 – Unexpected behavior when giving or testing for an item with certain components manually specified as their default values.</li>
+                <li>MC-300465 – Maps with the maximum number of markers cannot be placed in item frames.</li>
+                <li>MC-301003 – The bell part of bells worn on copper golems' "saddle" is not visible.</li>
+                <li>MC-302186 – Ambient lighting in the Nether appears discolored compared to previous versions.</li>
+                <li>MC-302408 – Inconsistent underwater lighting with the Conduit Power effect applied.</li>
+                <li>MC-302528 – Low sky & block light look outright broken when cast on the same area.</li>
+                <li>MC-302635 – Semi-transparent blocks render in front of solid blocks when viewed through semi-transparent blocks being pushed by a piston.</li>
+                <li>MC-302734 – Zombie horses constantly move in and out of water and burn to death.</li>
+                <li>MC-303119 – Feeding a cat or wolf in Survival mode with only one item in the selected item slot does not restore as much health as it should.</li>
+                <li>MC-303125 – Creepers can blow up after the player dies.</li>
+                <li>MC-303344 – Tooltips for selected items in dialogs are displayed even when the item isn't being hovered over.</li>
+                <li>MC-303389 – The ender dragon's velocity can be affected by attacks while perched.</li>
+                <li>MC-303403 – Hanging sign block displays render dark and above other blocks and mobs.</li>
+                <li>MC-303684 – Hoglins despawn when attached to a lead.</li>
+                <li>MC-303685 – Zoglins despawn when attached to leads.</li>
+                <li>MC-303692 – Debug overlay text has an indent when improved transparency is disabled.</li>
+                <li>MC-303749 – Dolphins can despawn when attached to leads.</li>
+                <li>MC-303750 – Squids & glow squids can despawn when attached to leads.</li>
+                <li>MC-304023 – Redundant level data fixer files are saved in worlds' "data" folder.</li>
+                <li>MC-304217 – Lunge's hunger requirement applies to post_piercing_attack effects of custom enchantments.</li>
+                <li>MC-304361 – The heads of zombie nautiluses have a massive empty gap on the back.</li>
+                <li>MC-304446 – Activating a stasis chamber with a sponge deletes the ender pearl.</li>
+                <li>MC-304599 – Dolphins don't follow players riding nautiluses like in Bedrock Edition.</li>
+                <li>MC-304631 – Anisotropic filtering set to 8x causes opaque translucent textures to become transparent in the distance when there are odd-sized block textures.</li>
+                <li>MC-304683 – Wandering traders don't spawn in single biome snowy plains worlds.</li>
+                <li>MC-304705 – The E value in entity_render_stats in the debug overlay doesn't work.</li>
+                <li>MC-304725 – Zombie villagers summoned with default spawn eggs always spawn as their plains variant.</li>
+                <li>MC-304761 – Spears' charge animation takes too long to rotate sideways for slower spears.</li>
+                <li>MC-304796 – Hovering over a disabled slider shows the pointing hand cursor instead of the forbidden cursor.</li>
+                <li>MC-304991 – Clicking on a chest with loot that hasn't been generated in Spectator mode makes the "block.chest.locked" sound.</li>
+                <li>MC-305012 – The description of the "Universal anger" game rule still uses the old ID of the "Forgive dead players" game rule.</li>
+                <li>MC-305040 – Nautili spawned as a result of a player breeding two other nautili can despawn.</li>
+                <li>MC-305123 – Curse of Vanishing doesn't work when the item is equipped on an armor stand.</li>
+                <li>MC-305196 – Witches always miss their shots when close to their target.</li>
+                <li>MC-305292 – Copper chests use the Christmas present texture.</li>
+                <li>MC-305369 – Trying to attach a leash to a fence outside its reach places a ghost leash knot and plays a sound.</li>
+                <li>MC-305388 – Bees never cease to be angry.</li>
+                <li>MC-305471 – Cacti appear with seams on the edges and corners when using higher resolution texture packs with mipmaps enabled.</li>
+                <li>MC-305580 – Baby zombie horses and baby skeleton horses grow into adults, unlike other baby undead mobs.</li>
+                <li>MC-305699 – Piglins in groups fail to initiate hoglin hunting behavior.</li>
+                <li>MC-305857 – Entity hitboxes now move jaggedly when the game is frozen.</li>
+                <li>MC-305888 – Turtle eggs no longer hatch in the Nether or the End.</li>
+                <li>MC-306064 – Mobs can be forced to look like they're dying while they aren't by using commands.</li>
+                <li>MC-306110 – The side textures of black, white splotched, killer, and Toast rabbits' heads extend to the bottom of their heads.</li>
+                <li>MC-306123 – Wolves still try to attack players even in Peaceful difficulty.</li>
+                <li>MC-306427 – Certain mobs holding items with empty "kinetic_weapon" components crash the game whenever target acquisition succeeds.</li>
+                <li>MC-306566 – The totem of undying screen effect now jitters while the game is frozen.</li>
+                <li>MC-306658 – Dolphins will let themselves drown even with ample access to air.</li>
+                <li>MC-306798 – Ender dragons with a DragonDeathTime of 200 or greater never disappear.</li>
+                <li>MC-306840 – Dolphins still drown themselves when no players are nearby.</li>
             </ul>
-            <div class="note">📌 Полный список исправлений доступен в официальном журнале изменений.</div>
         </div>
 
         <hr>
-
         <div style="text-align: center; color: #888; padding: 20px 0;">
             Minecraft Java Edition 26.1 — обновление, улучшающее как геймплей, так и техническую основу игры.<br>
             ✨ Новые возможности для картмейкеров, датапаков и всех, кто любит кастомизацию.<br>
@@ -468,5 +1060,3 @@
         </div>
     </div>
 </div>
-</body>
-</html>
